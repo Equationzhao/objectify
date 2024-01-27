@@ -6,7 +6,7 @@ import (
 )
 
 // SetupZap sets up a new zap logger, and replace global zap-logger(zap.L()) with it
-// actual OutputPaths and ErrorOutputPaths are stderr + OutputPaths and stderr + ErrorOutputPaths
+// actual OutputPaths and ErrorOutputPaths are stdout + OutputPaths and stderr + ErrorOutputPaths
 func SetupZap(OutputPaths, ErrorOutputPaths []string, Level zapcore.Level) {
 	config := zap.Config{
 		Level:       zap.NewAtomicLevelAt(Level),
